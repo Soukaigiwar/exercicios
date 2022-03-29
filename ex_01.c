@@ -21,17 +21,17 @@
 
 int	main(void)
 {
-	int	read_value;
+	int	value;
 	int	decimeters_value;
 	int	centimeters_value;
 	int	millimeters_value;
 
-	read_value = 0;
+	value = 0;
 	printf("Escreva o valor desejado em metros: ");
-	scanf("%i", &read_value);
-	decimeters_value = read_value * 10;
-	centimeters_value = read_value * 100;
-	millimeters_value = read_value * 1000;
+	scanf("%i", &value);
+	decimeters_value = value * 10;
+	centimeters_value = value * 100;
+	millimeters_value = value * 1000;
 	printf("O valor convertido em:\n");
 	printf("Decímetros foi: %i dm. \n", decimeters_value);
 	printf("Centímetros foi: %i cm. \n", centimeters_value);

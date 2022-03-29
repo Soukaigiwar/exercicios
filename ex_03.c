@@ -2,13 +2,13 @@
 
 int main() {
 
-  int read_value;
+  int value;
   
-  read_value = 0;
+  value = 0;
   
   printf("Digite qualquer número inteiro: ");
-  scanf("%i", &read_value);
-  printf("\nO valor digitado em Hexadecimal é: %x.", read_value);
-  printf("\nO valor digitado em Octadecimal é: %o.", read_value);
-  return 0;
+  scanf("%i", &value);
+  printf("\nO valor digitado em Hexadecimal é: %x.", value);
+  printf("\nO valor digitado em Octadecimal é: %o.", value);
+  return (0);
 }
