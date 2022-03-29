@@ -20,23 +20,23 @@
 
 int	main(void)
 {
-	int	multiplicando;
-	int	multiplicador;
-	int	produto;
+	int	multiplicand;
+	int	multiplier;
+	int	product;
 
-	multiplicando = 1;
-	multiplicador = 1;
-	while (multiplicando < 10)
+	multiplicand = 1;
+	multiplier = 1;
+	while (multiplicand < 10)
 	{
-		printf("Tabuada do %i \n", multiplicando);
-		while (multiplicador <= 10)
+		printf("Tabuada do %i \n", multiplicand);
+		while (multiplier <= 10)
 		{
-			produto = multiplicando * multiplicador;
-			printf("%i X %i = %i\n", multiplicando, multiplicador, produto);
-			multiplicador++;
+			product = multiplicand * multiplier;
+			printf("%i X %i = %i\n", multiplicand, multiplier, product);
+			multiplier++;
 		}
-		multiplicador = 1;
-		multiplicando++;
+		multiplier = 1;
+		multiplicand++;
 		printf("\n");
 	}
 	return (0);
