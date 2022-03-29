@@ -21,20 +21,20 @@
 
 int	main(void)
 {
-	int	valor_lido;
-	int	valor_decimetros;
-	int	valor_centimetros;
-	int	valor_milimetros;
+	int	read_value;
+	int	decimeters_value;
+	int	centimeters_value;
+	int	millimeters_value;
 
-	valor_lido = 0;
+	read_value = 0;
 	printf("Escreva o valor desejado em metros: ");
-	scanf("%i", &valor_lido);
-	valor_decimetros = valor_lido * 10;
-	valor_centimetros = valor_lido * 100;
-	valor_milimetros = valor_lido * 1000;
+	scanf("%i", &read_value);
+	decimeters_value = read_value * 10;
+	centimeters_value = read_value * 100;
+	millimeters_value = read_value * 1000;
 	printf("O valor convertido em:\n");
-	printf("Decímetros foi: %i dm. \n", valor_decimetros);
-	printf("Centímetros foi: %i cm. \n", valor_centimetros);
-	printf("Milímetros foi: %i mm. \n", valor_milimetros);
+	printf("Decímetros foi: %i dm. \n", decimeters_value);
+	printf("Centímetros foi: %i cm. \n", centimeters_value);
+	printf("Milímetros foi: %i mm. \n", millimeters_value);
 	return (0);
 }
