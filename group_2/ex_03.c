@@ -6,10 +6,16 @@ int	main(void)
 
 	printf("Digite o preço do produto: ");
 	scanf("%f", &price);
-	if (price < 100)
+	while (price < 100)
+	{
 		price *= 1.1;
-	else
+		break ;
+	}
+	while (price >= 100)
+	{
 		price *= 1.2;
+		break ;
+	}
 	printf("O novo preço é: %.2f\n", price);
 	return (0);
 }
