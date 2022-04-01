@@ -2,6 +2,6 @@
 // dados BOOL (com as constantes TRUE e FALSE) caso isso ainda não tenha
 // sido feito.
 
-// #ifndef BOOL 
-// #define true
-// #endif
+#ifndef BOOL 
+#define true
+#endif
