@@ -1,7 +1,9 @@
 #include <stdio.h>
 
-void    options(void)
+void    options(int total)
 {
+	int option;
+	int	installments;
     printf("\n\t\t\t\t01 - A vista com 10% de desconto.");
     printf("\n\t\t\t\t02 - Duas vezes com o preço da etiqueta.");
     printf("\n\t\t\t\t03 - De 3 a 10 vezes com juros de 3% ao mês");
@@ -48,12 +50,11 @@ int main(void)
 {
     float   total;
     int     option;
-    int     installments;
 
     printf("Digite o total gasto:");
     scanf("%.2f", &total);
     printf("\nForma de pagamento:\t");
-    options();
+    options(total);
     printf("\n\n");
     return (0);
 }
