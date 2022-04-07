@@ -1,5 +1,20 @@
 #include <stdio.h>
 
+int	options(int total);
+
+void	main_menu(void)
+{
+	float	total;
+	int		option;
+
+	printf("\nDigite o total gasto ou 0 para sair R$ ");
+	scanf("%f", &total);
+	if (total == 0)
+		options(0);
+	options(total);
+	printf("\n\n");
+}
+
 void	option_1(float total)
 {
 	total *= 0.9;
@@ -20,15 +35,22 @@ void	option_3(float total, int installments)
 	printf("que da o total de R$ %.2f\n", installments * total);
 }
 
-void	options(int total)
+int	options(int total)
 {
 	int	option;
 	int	installments;
 
+	if (total == 0)
+	{
+		printf("Até logo. Volte sempre!\n");
+		return (0);
+	}
+	printf("\nForma de pagamento:\t");
 	printf("\n\t\t1 - A vista com 10 porcento de desconto.");
 	printf("\n\t\t2 - Duas vezes com o preço da etiqueta.");
 	printf("\n\t\t3 - De 3 a 10 vezes com juros de 3 porcento ao mês");
 	printf("\n\t\t    Somente para compras acima de R$ 100,00\n");
+	printf("\n\t\t0 - Sair.\n");
 	scanf("%d", &option);
 	switch (option)
 	{
@@ -43,8 +65,13 @@ void	options(int total)
 			scanf("%d", &installments);
 			if (installments > 2 && installments < 11)
 				option_3(total, installments);
-				break;
+			break;
+		case 0:
+			printf("Até logo. Volte sempre!\n");
+			break;
 		default:
+			printf("Erro na opção selecionada.\n");
+			main_menu();
 			break;
 	}
 }
@@ -52,13 +79,6 @@ void	options(int total)
 
 int	main(void)
 {
-	float	total;
-	int		option;
-
-	printf("\nDigite o total gasto R$ ");
-	scanf("%f", &total);
-	printf("\nForma de pagamento:\t");
-	options(total);
-	printf("\n\n");
+	main_menu();
 	return (0);
 }
